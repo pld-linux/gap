@@ -9,6 +9,7 @@ Source0:	ftp://ftp-gap.dcs.st-and.ac.uk/pub/gap/gap4/%{name}4r2.zoo
 Patch0:		%{name}-gac.patch
 URL:		http://www-gap.dcs.st-and.ac.uk/gap/
 BuildRequires:	unzoo
+BuildRequires:	tetex-dvips
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
