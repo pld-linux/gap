@@ -1,0 +1,9 @@
+[Desktop Entry]
+Name=Gap
+Comment=Groups, Algorithms, Programming
+Comment[pl]=Grupy, Algorytmy, Programowanie
+Icon=
+Exec=gap
+Terminal=1
+Type=Application
+# vi: encoding=utf-8
