@@ -5,9 +5,9 @@ Version:	4.2
 Release:	2
 License:	distributable
 Group:		Applications/Math
-URL:		http://www-gap.dcs.st-and.ac.uk/gap/
 Source0:	ftp://ftp-gap.dcs.st-and.ac.uk/pub/gap/gap4/%{name}4r2.zoo
 Patch0:		%{name}-gac.patch
+URL:		http://www-gap.dcs.st-and.ac.uk/gap/
 BuildRequires:	unzoo
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -20,9 +20,9 @@ GAP jest darmowym, otwartym i rozszerzalnym pakietem oprogramowania do
 obliczeñ dyskretnej abstrakcyjnej algebry.
 
 %package share_package_demo
-Group:		Applications/Math
 Summary:	Example share package for GAP
 Summary(pl):	¬ród³a przyk³adowego pakietu wspó³dzielonego dla GAP
+Group:		Applications/Math
 Requires:	gap >= 4.0
 
 %description share_package_demo
@@ -79,7 +79,7 @@ mv -f ref/manual.ps refman.ps
 mv -f tut/manual.ps tutorial.ps
 
 %clean
-#rm -rf $RPM_BUILD_ROOT
+rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
@@ -88,4 +88,5 @@ mv -f tut/manual.ps tutorial.ps
 %{_datadir}/gap
 
 %files share_package_demo
+%defattr(644,root,root,755)
 %{_examplesdir}/gap
