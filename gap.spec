@@ -66,14 +66,12 @@ mv -f prg/manual.ps prgtutorial.ps
 mv -f ref/manual.ps refman.ps
 mv -f tut/manual.ps tutorial.ps
 
-gzip -9nf *.ps
-
 %clean
 rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc gap4r2/doc/*.ps.gz gap4r2/doc/htm/*
+%doc gap4r2/doc/*.ps gap4r2/doc/htm/*
 %attr(755,root,root) %{_bindir}/*
 %{_datadir}/gap
 %{_examplesdir}/gap
