@@ -5,7 +5,7 @@ Version:	4.2
 Release:	1
 License:	distributable
 Group:		Applications/Math
-URL:		http://www-gap.dcs.st-and.ac.uk/gap
+URL:		http://www-gap.dcs.st-and.ac.uk/gap/
 Source0:	ftp://ftp-gap.dcs.st-and.ac.uk/pub/gap/gap4/%{name}4r2.zoo
 Patch0:		%{name}-gac.patch
 BuildRequires:	unzoo
