@@ -5,8 +5,6 @@ Version:	4.2
 Release:	1
 License:	distributable
 Group:		Applications/Math
-Group(de):	Applikationen/Mathematik
-Group(pl):	Aplikacje/Matematyczne
 URL:		http://www-gap.dcs.st-and.ac.uk/gap
 Source0:	ftp://ftp-gap.dcs.st-and.ac.uk/pub/gap/gap4/%{name}4r2.zoo
 Patch0:		%{name}-gac.patch
