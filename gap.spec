@@ -2,10 +2,11 @@ Summary:	Groups, Algorithms and Programming
 Summary(pl):	Grupy, Algorytmy i Programowanie
 Name:		gap
 Version:	4.2
-Release:	2
+Release:	3
 License:	distributable
 Group:		Applications/Math
 Source0:	ftp://ftp-gap.dcs.st-and.ac.uk/pub/gap/gap4/%{name}4r2.zoo
+Source1:	%{name}.desktop
 Patch0:		%{name}-gac.patch
 URL:		http://www-gap.dcs.st-and.ac.uk/gap/
 BuildRequires:	unzoo
@@ -52,7 +53,7 @@ cd bin/%{_target_platform}
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT{%{_bindir},%{_datadir}/gap/pkg,%{_examplesdir}/gap}
+install -d $RPM_BUILD_ROOT{%{_bindir},%{_datadir}/gap/pkg,%{_examplesdir}/gap,%{_applnkdir}/Scientific/Mathematics}
 
 cd gap4r2
 
@@ -79,6 +80,8 @@ mv -f prg/manual.ps prgtutorial.ps
 mv -f ref/manual.ps refman.ps
 mv -f tut/manual.ps tutorial.ps
 
+install %{SOURCE1} $RPM_BUILD_ROOT%{_applnkdir}/Scientific/Mathematics/%{name}.desktop
+
 %clean
 rm -rf $RPM_BUILD_ROOT
 
@@ -87,6 +90,7 @@ rm -rf $RPM_BUILD_ROOT
 %doc gap4r2/doc/*.ps gap4r2/doc/htm/*
 %attr(755,root,root) %{_bindir}/*
 %{_datadir}/gap
+%{_applnkdir}/Scientific/Mathematics/*
 
 %files share_package_demo
 %defattr(644,root,root,755)
