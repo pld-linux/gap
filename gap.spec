@@ -6,6 +6,7 @@ Release:	3
 License:	distributable
 Group:		Applications/Math
 Source0:	ftp://ftp-gap.dcs.st-and.ac.uk/pub/gap/gap4/%{name}4r2.zoo
+# Source0-md5:	e8c4e3fa38efc582f980a0d377112057
 Source1:	%{name}.desktop
 Patch0:		%{name}-gac.patch
 URL:		http://www-gap.dcs.st-and.ac.uk/gap/
