@@ -2,7 +2,7 @@ Summary:	Groups, Algorithms and Programming
 Summary(pl):	Grupy, Algorytmy i Programowanie
 Name:		gap
 Version:	4.2
-Release:	1
+Release:	2
 License:	distributable
 Group:		Applications/Math
 URL:		http://www-gap.dcs.st-and.ac.uk/gap/
@@ -18,6 +18,18 @@ discrete abstract algebra.
 %description -l pl
 GAP jest darmowym, otwartym i rozszerzalnym pakietem oprogramowania do
 obliczeñ dyskretnej abstrakcyjnej algebry.
+
+%package share_package_demo
+Group:		Applications/Math
+Summary:	Example share package for GAP
+Summary(pl):	¬ród³a przyk³adowego pakietu wspó³dzielonego dla GAP
+Requires:	gap >= 4.0
+
+%description share_package_demo
+This is an example how to add a share package to GAP (version 4).
+
+%description share_package_demo -l pl
+Przyk³ad, jak dodaæ wspó³dzielony pakiet do GAP (wersja 4).
 
 %prep
 %setup -q -c -T
@@ -67,11 +79,13 @@ mv -f ref/manual.ps refman.ps
 mv -f tut/manual.ps tutorial.ps
 
 %clean
-rm -rf $RPM_BUILD_ROOT
+#rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
 %doc gap4r2/doc/*.ps gap4r2/doc/htm/*
 %attr(755,root,root) %{_bindir}/*
 %{_datadir}/gap
+
+%files share_package_demo
 %{_examplesdir}/gap
