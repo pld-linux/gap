@@ -26,12 +26,12 @@ cd gap4r2
 mv cnf/configure.in cnf/configure.bak
 sed -e 's/GP_CFLAGS//g' cnf/configure.bak > cnf/configure.in
 %{__make} -C cnf configure.out
-%configure
+%configure2_13
 
 mkdir -p bin/%{_target_platform}
 cp cnf/configure.out bin/%{_target_platform}/configure
 cd bin/%{_target_platform}
-%configure
+%configure2_13
 %{__make}
 
 %install
