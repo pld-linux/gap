@@ -1,0 +1,13 @@
+--- gap-4.2/gap4r2/cnf/gac.in.orig	Thu Oct 21 09:44:24 1999
++++ gap-4.2/gap4r2/cnf/gac.in	Wed Feb 28 17:41:36 2001
+@@ -46,8 +46,8 @@
+     gap_compiler="./gap";
+     gap_binary="./";
+ else
+-    gap_dir="${gap_bin}/../..";
+-    gap_compiler="${gap_bin}/gap";
++    gap_dir="@datadir@/gap";
++    gap_compiler="@bindir@/gap";
+     gap_binary="${gap_bin}";
+ fi
+ gap_options=""
