@@ -1,8 +1,9 @@
 Summary:	Groups, Algorithms and Programming
+Summary(pl):	Grupy, Algorytmy i Programowanie
 Name:		gap
 Version:	4.2
 Release:	1
-Copyright:	distributable
+License:	distributable
 Group:		Applications/Math
 Group(de):	Applikationen/Mathematik
 Group(pl):	Aplikacje/Matematyczne
@@ -16,6 +17,10 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 GAP is a free, open and extensible software package for computation in
 discrete abstract algebra.
 
+%description -l pl
+GAP jest darmowym, otwartym i rozszerzalnym pakietem oprogramowania do
+obliczeñ dyskretnej abstrakcyjnej algebry.
+
 %prep
 %setup -q -c -T
 unzoo -x %{SOURCE0}
@@ -23,13 +28,13 @@ unzoo -x %{SOURCE0}
 
 %build
 cd gap4r2
-mv cnf/configure.in cnf/configure.bak
+mv -f cnf/configure.in cnf/configure.bak
 sed -e 's/GP_CFLAGS//g' cnf/configure.bak > cnf/configure.in
 %{__make} -C cnf configure.out
 %configure2_13
 
 mkdir -p bin/%{_target_platform}
-cp cnf/configure.out bin/%{_target_platform}/configure
+cp -f cnf/configure.out bin/%{_target_platform}/configure
 cd bin/%{_target_platform}
 %configure2_13
 %{__make}
@@ -57,11 +62,11 @@ for i in ext new prg ref tut ; do
 	(cd $i ; dvips manual.dvi -o )
 done
 dvips fullindex.dvi -o
-mv new/manual.ps supplement.ps
-mv ext/manual.ps prgmanual.ps
-mv prg/manual.ps prgtutorial.ps
-mv ref/manual.ps refman.ps
-mv tut/manual.ps tutorial.ps
+mv -f new/manual.ps supplement.ps
+mv -f ext/manual.ps prgmanual.ps
+mv -f prg/manual.ps prgtutorial.ps
+mv -f ref/manual.ps refman.ps
+mv -f tut/manual.ps tutorial.ps
 
 gzip -9nf *.ps
 
