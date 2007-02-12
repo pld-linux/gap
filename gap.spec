@@ -1,5 +1,5 @@
 Summary:	Groups, Algorithms and Programming
-Summary(pl):	Grupy, Algorytmy i Programowanie
+Summary(pl.UTF-8):   Grupy, Algorytmy i Programowanie
 Name:		gap
 Version:	4.2
 Release:	3
@@ -18,21 +18,21 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 GAP is a free, open and extensible software package for computation in
 discrete abstract algebra.
 
-%description -l pl
+%description -l pl.UTF-8
 GAP jest darmowym, otwartym i rozszerzalnym pakietem oprogramowania do
-obliczeñ dyskretnej abstrakcyjnej algebry.
+obliczeÅ„ dyskretnej abstrakcyjnej algebry.
 
 %package share_package_demo
 Summary:	Example share package for GAP
-Summary(pl):	¬ród³a przyk³adowego pakietu wspó³dzielonego dla GAP
+Summary(pl.UTF-8):   Å¹rÃ³dÅ‚a przykÅ‚adowego pakietu wspÃ³Å‚dzielonego dla GAP
 Group:		Applications/Math
 Requires:	gap >= 4.0
 
 %description share_package_demo
 This is an example how to add a share package to GAP (version 4).
 
-%description share_package_demo -l pl
-Przyk³ad, jak dodaæ wspó³dzielony pakiet do GAP (wersja 4).
+%description share_package_demo -l pl.UTF-8
+PrzykÅ‚ad, jak dodaÄ‡ wspÃ³Å‚dzielony pakiet do GAP (wersja 4).
 
 %prep
 %setup -q -c -T
