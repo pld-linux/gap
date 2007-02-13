@@ -1,5 +1,5 @@
 Summary:	Groups, Algorithms and Programming
-Summary(pl.UTF-8):   Grupy, Algorytmy i Programowanie
+Summary(pl.UTF-8):	Grupy, Algorytmy i Programowanie
 Name:		gap
 Version:	4.2
 Release:	3
@@ -24,7 +24,7 @@ obliczeń dyskretnej abstrakcyjnej algebry.
 
 %package share_package_demo
 Summary:	Example share package for GAP
-Summary(pl.UTF-8):   Źródła przykładowego pakietu współdzielonego dla GAP
+Summary(pl.UTF-8):	Źródła przykładowego pakietu współdzielonego dla GAP
 Group:		Applications/Math
 Requires:	gap >= 4.0
 
