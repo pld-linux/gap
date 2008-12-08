@@ -1,15 +1,15 @@
 Summary:	Groups, Algorithms and Programming
 Summary(pl.UTF-8):	Grupy, Algorytmy i Programowanie
 Name:		gap
-Version:	4.2
-Release:	3
+Version:	4.4.10
+Release:	0.1
 License:	distributable
 Group:		Applications/Math
-Source0:	ftp://ftp-gap.dcs.st-and.ac.uk/pub/gap/gap4/%{name}4r2.zoo
-# Source0-md5:	e8c4e3fa38efc582f980a0d377112057
+Source0:	ftp://ftp.gap-system.org/pub/gap/gap4/tar.bz2/%{name}4r4p10.tar.bz2
+# Source0-md5:	8b7d5fbe420cc5d8fc59c187374bc4f4
 Source1:	%{name}.desktop
 Patch0:		%{name}-gac.patch
-URL:		http://www-gap.dcs.st-and.ac.uk/gap.html
+URL:		http://www.gap-system.org/
 BuildRequires:	unzoo
 BuildRequires:	tetex-dvips
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -35,8 +35,7 @@ This is an example how to add a share package to GAP (version 4).
 Przykład, jak dodać współdzielony pakiet do GAP (wersja 4).
 
 %prep
-%setup -q -c -T
-unzoo -x %{SOURCE0}
+%setup -q -c
 %patch0 -p1
 
 %build
