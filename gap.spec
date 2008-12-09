@@ -2,7 +2,7 @@ Summary:	Groups, Algorithms and Programming
 Summary(pl.UTF-8):	Grupy, Algorytmy i Programowanie
 Name:		gap
 Version:	4.4.10
-Release:	1
+Release:	2
 License:	distributable
 Group:		Applications/Math
 Source0:	ftp://ftp.gap-system.org/pub/gap/gap4/tar.bz2/%{name}4r4p10.tar.bz2
