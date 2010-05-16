@@ -10,7 +10,9 @@ Source0:	ftp://ftp.gap-system.org/pub/gap/gap4/tar.bz2/%{name}4r4p10.tar.bz2
 Source1:	%{name}.desktop
 Patch0:		%{name}-gac.patch
 URL:		http://www.gap-system.org/
+BuildRequires:	autoconf
 BuildRequires:	ghostscript
+BuildRequires:	texlive-dvips
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
